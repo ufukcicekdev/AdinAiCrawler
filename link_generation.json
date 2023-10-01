@@ -1,0 +1,251 @@
+{
+    "1": {
+        "is_active": true,
+        "type":"link_generation",
+        "name": "Turkcell",
+        "base_url":"https://www.turkcell.com.tr",
+        "domains_subscription_id": 1,
+        "scroll": false,
+        "wait_before_load":3500,
+        "for_loop":"div#all-devices-section div.product",
+        "run_js":"",
+        "urls_list":[
+            "https://www.turkcell.com.tr/paket-ve-tarifeler/yeni-musteri","https://www.turkcell.com.tr/paket-ve-tarifeler/faturali-hat",
+            "https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-rahat","https://www.turkcell.com.tr/paket-ve-tarifeler/hazir-kart",
+            "https://www.turkcell.com.tr/paket-ve-tarifeler/hazir-kart-faturali-hat-gecis-paketleri","https://www.turkcell.com.tr/paket-ve-tarifeler/yurt-disinda-kullanim",
+            "https://www.turkcell.com.tr/paket-ve-tarifeler/yurt-disini-arama"
+            ],
+        "selectors":[
+
+            {
+                "name":"menu_name",
+                "selector":"section#container > div.container > h1",
+                "attribute":""
+            },
+            {
+                "name":"campaing_name",
+                "selector":"div.product h3",
+                "attribute":""
+            },
+            {
+                "price":[
+                    {
+                        "name":"campaings_price",
+                        "selector":"div#all-devices-section div.product div.m-card__foot span.a-price",
+                        "attribute":""
+                    }
+                ]
+            },
+            {
+                "name":"geturl",
+                "selector":"div#all-devices-section div.product a",
+                "attribute":"href"
+            },
+            {
+                "name":"telephone",
+                "selector":"div#all-devices-section div.product div.m-card__tariffs div.a-tariff >em.icon-telephone  + div ",
+                "attribute":""
+            },
+            {
+                "name":"socialmedia",
+                "selector":"div#all-devices-section div.product div.m-card__tariffs div.a-tariff >em.icon-social-media  + div ",
+                "attribute":""
+            },
+            {
+                "name":"celular",
+                "selector":"div#all-devices-section div.product div.m-card__tariffs div.a-tariff >em.icon-cellular  + div ",
+                "attribute":"href"
+            },
+            {
+                "name":"campaingsdetail",
+                "selector":"div#all-devices-section div.product div.m-card__body p",
+                "attribute":"href"
+            },
+            {
+                "name":"screenshots",
+                "selector":"div.product",
+                "attribute":""
+            },
+            {
+                "name":"next_page",
+                "selector":"",
+                "attribute":""
+            }
+        ]
+        
+        
+    },
+    "2": {
+        "is_active": true,
+        "type":"link_generation",
+        "name": "TurkTelekom",
+        "base_url":"https://bireysel.turktelekom.com.tr",
+        "domains_subscription_id": 2,
+        "scroll": false,
+        "wait_before_load":3500,
+        "for_loop":"div.card-filter-results div.card-list div.card.v2",
+        "run_js":"var element = document.querySelector('div.cbot-animation-holder.cbot-bounce'); if (element){element.style.display = 'none'}",
+        "urls_list":[
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-paketler",
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler",
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-paketler",
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturasiz-tarifeler",
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/ezber-bozan-1000-tarifesi",
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/ezber-bozan-1500-tarifesi",
+            "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/ezber-bozan-500-tarifesi",
+            "https://bireysel.turktelekom.com.tr/mobil/mevcut-musteri-tarife-ve-paketleri/tum-faturali-tarifeler",
+            "https://bireysel.turktelekom.com.tr/mobil/mevcut-musteri-tarife-ve-paketleri/tum-faturali-paketler",
+            "https://bireysel.turktelekom.com.tr/mobil/mevcut-musteri-tarife-ve-paketleri/tum-faturasizdan-faturaliya-tarifeler",
+            "https://bireysel.turktelekom.com.tr/mobil/yurt-disi/yurt-disinda-faturali-kullanim",
+            "https://bireysel.turktelekom.com.tr/mobil/yurt-disi/yurt-disini-arama-faturali",
+            "https://bireysel.turktelekom.com.tr/mobil/yurt-disi/yurt-disinda-faturasiz-kullanim",
+            "https://bireysel.turktelekom.com.tr/mobil/yurt-disi/yurt-disini-arama-faturasiz",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/calisanlar/yeni-musteri-kamu-tarifeleri",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/calisanlar/mevcut-musteri-kamu-tarifeleri",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/taraftarlar/yeni-musteri-tarife-ve-paketleri/tum-faturali-tarifeler",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/taraftarlar/yeni-musteri-tarife-ve-paketleri/tum-faturasiz-tarifeler",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/50-kulubu/yeni-musteri-50-kulubu-teklifler/tum-faturali-teklifler",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/50-kulubu/yeni-musteri-50-kulubu-teklifler/tum-faturasiz-teklifler",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/erisilebilir-yasam/erisilebilir-yasam-teklifleri?GroupName=Mobil",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/hit/yeni-musteri-tarife-ve-paketleri",
+            "https://bireysel.turktelekom.com.tr/ozel-programlar/hit/mevcut-musteri-tarife-ve-paketleri"
+
+            ],
+        "selectors":[
+
+            {
+                "name":"menu_name",
+                "selector":"div.page-head> h1, div.detail-right-content h1",
+                "attribute":""
+            },
+            {
+                "name":"campaing_name",
+                "selector":"div.card-campaign-box-info.filter-list h4",
+                "attribute":""
+            },
+            {
+                "price":[
+                    {
+                        "name":"campaings_price",
+                        "selector":"div.prices div.first-price, div.detail-text-btns-price",
+                        "attribute":""
+                    }
+
+                ]
+            },
+            {
+                "name":"geturl",
+                "selector":"div.card.v2 div.button a",
+                "attribute":"href"
+            },
+            {
+                "name":"telephone",
+                "selector":"div.card-minute.multiple div:nth-child(1)",
+                "attribute":""
+            },
+            {
+                "name":"socialmedia",
+                "selector":"",
+                "attribute":""
+            },
+            {
+                "name":"celular",
+                "selector":"div.card-campaign-box-info div.card-recipe.single strong",
+                "attribute":"href"
+            },
+            {
+                "name":"campaingsdetail",
+                "selector":"div#all-devices-section div.product div.m-card__body p",
+                "attribute":"href"
+            },
+            {
+                "name":"screenshots",
+                "selector":"div.card-campaign-box-info",
+                "attribute":""
+            },
+            {
+                "name":"next_page",
+                "selector":"div.pager a.next",
+                "attribute":""
+            }
+        ]
+        
+        
+    },
+    "3": {
+        "is_active": true,
+        "type":"link_generation",
+        "name": "Vodafone",
+        "base_url":"https://www.vodafone.com.tr",
+        "domains_subscription_id": 3,
+        "scroll": false,
+        "wait_before_load":6000,
+        "for_loop":" swiper.swiper-tarife  div.red.tarife-card,  swiper.swiper-tarife  div.tarife-card.uyumlu",
+        "run_js":"var element = document.querySelector('div#vdf--web-tobi-icon'); if (element) element.style.display = 'none'; setTimeout(() => document.querySelector('a.yonlendirme-close').click(), 3000); setTimeout(() => document.querySelector('button#onetrust-accept-btn-handler').click(), 3000);",
+        "urls_list":[
+            "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler",
+            "https://www.vodafone.com.tr/numara-tasima-yeni-hat/tarifeler/NEW/prepaid/ALL?segmentpage=prepaidnltarifekarti-tumkolaypaketler"
+            
+        ],
+        "selectors":[
+
+            {
+                "name":"menu_name",
+                "selector":"div.nav-faturali-faturasiz a.item.active, a.fake-tab-link.active",
+                "attribute":""
+            },
+            {
+                "name":"campaing_name",
+                "selector":"div.tarife-top span,   swiper.swiper-tarife  div.tarife-card.uyumlu div.tarife-top",
+                "attribute":""
+            },
+            {
+                "price":[
+                    {
+                        "name":"campaings_price",
+                        "selector":"div.swiper-slide div.red.tarife-card div.price div.bottom,   swiper.swiper-tarife  div.tarife-card.uyumlu div.bottom",
+                        "attribute":""
+                    }
+                ]
+            },
+            {
+                "name":"telephone",
+                "selector":"div.swiper-slide div.red.tarife-card div.dk-sms span,  swiper.swiper-tarife  div.tarife-card.uyumlu div.dk-sms",
+                "attribute":""
+            },
+            {
+                "name":"geturl",
+                "selector":"div.swiper-slide div.red.tarife-card div.dk-sms span",
+                "attribute":"href"
+            },
+            {
+                "name":"socialmedia",
+                "selector":" swiper.swiper-tarife  div.red.tarife-card div.ek-uygulamalar ,  swiper.swiper-tarife  div.tarife-card.uyumlu div.ek-uygulamalar",
+                "attribute":""
+            },
+            {
+                "name":"celular",
+                "selector":"div.swiper-slide div.red.tarife-card div.left div.first,  swiper.swiper-tarife  div.tarife-card.uyumlu div.tarife-gb div.first span",
+                "attribute":""
+            },
+            {
+                "name":"campaingsdetail",
+                "selector":"",
+                "attribute":"href"
+            },
+            {
+                "name":"screenshots",
+                "selector":"swiper.swiper-tarife div.swiper-slide div.red.tarife-card,  swiper.swiper-tarife  div.tarife-card.uyumlu ",
+                "attribute":""
+            },
+            {
+                "name":"next_page",
+                "selector":"",
+                "attribute":""
+            }
+        ]
+        
+        
+    }
+   
+}
