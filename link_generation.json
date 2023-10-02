@@ -84,7 +84,7 @@
         "scroll": false,
         "wait_before_load":3500,
         "for_loop":"div.card-filter-results div.card-list div.card.v2",
-        "run_js":"var element = document.querySelector('div.cbot-animation-holder.cbot-bounce'); if (element){element.style.display = 'none'}",
+        "run_js":"var element = document.querySelector('div.cbot-animation-holder.cbot-bounce'); if (element){element.style.display = 'none'}; var element1 = document.querySelector('div.to-top-btn '); if (element1) element1.style.display = 'none';",
         "urls_list":[
             "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-paketler",
             "https://bireysel.turktelekom.com.tr/mobil/yeni-musteri-tarife-ve-paketleri/faturali-tarifeler",
