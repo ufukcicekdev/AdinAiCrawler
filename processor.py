@@ -5,6 +5,7 @@ from utility.db import DBHelper
 from fileupload import *
 import json
 import os
+import re
 from logger import log_to_db
 from dotenv import load_dotenv
 
@@ -101,7 +102,7 @@ def query_insert_links(domain_id, menu_name, campaing_name, campaing_url, teleph
                     campaing_price_detail, img_url, create_date, "time_stamp") 
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);""")
         values = (domain_id, menu_name, campaing_name, campaing_url, telephone_options, socialmedia_options, celular_options, campaingsdetail_options, campaings_price_options, img_url, created_at, time_stamp)
-        db_helper.execute(sql_script,values)
+        #db_helper.execute(sql_script,values)
     except Exception as e:
         log_to_db('ERROR', str(e))
 
@@ -160,6 +161,8 @@ def get_href_links(page, selector, attribute, index, base_url):
 def get_inner_text(page, selector, attribute, index):
     try:
         result = page.evaluate(f"document.querySelectorAll('{selector}')[{index}].innerText;")
+        result = re.sub(r'[\n\t]', '', result)
+        print(result)
     except Exception as e:
         log_to_db('ERROR', str(e))
         result = ""
