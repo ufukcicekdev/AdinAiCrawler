@@ -96,7 +96,7 @@ def query_insert_links(domain_id, menu_name, campaing_name, campaing_url, teleph
         now_time = dt.datetime.now()
         created_at = now_time.strftime("%Y-%m-%d")
         time_stamp = now_time.strftime("%Y-%m-%d %H:%M:%S")
-        sql_script = ("""INSERT INTO public.adin_telecommunication_product_detail
+        sql_script = ("""INSERT INTO public.temp_adin_telecommunication_product_detail
                 (domain_id, menu_title, campaign_title, campaign_url, 
                     minute_usage, social_media_gb, celular_gb, campaign_detail, 
                     campaign_price_detail, img_url, create_date, "time_stamp") 
@@ -162,7 +162,6 @@ def get_inner_text(page, selector, attribute, index):
     try:
         result = page.evaluate(f"document.querySelectorAll('{selector}')[{index}].innerText;")
         result = re.sub(r'[\n\t]', '', result)
-        print(result)
     except Exception as e:
         log_to_db('ERROR', str(e))
         result = ""
